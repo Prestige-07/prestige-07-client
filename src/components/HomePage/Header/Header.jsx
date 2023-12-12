@@ -31,6 +31,7 @@ export const Header = () => {
         <HeaderContainer>
           <a
             href="#home"
+            title="Головна сторінка"
             onClick={e => {
               e.preventDefault();
               handleSmoothScroll('home');

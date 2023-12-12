@@ -14,7 +14,11 @@ export const ContactButton = () => {
 
   return (
     <ContactsWrapper>
-      <Button type="button" onClick={() => setOpen(!isOpen)}>
+      <Button
+        type="button"
+        aria-label="Контакти"
+        onClick={() => setOpen(!isOpen)}
+      >
         <Icon />
       </Button>
 

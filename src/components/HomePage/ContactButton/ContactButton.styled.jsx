@@ -6,16 +6,11 @@ export const ContactsWrapper = styled.div`
   top: 120px;
   right: 15px;
 
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-
-  min-width: 300px;
+  width: 70px;
+  height: 70px;
 `;
 
 export const Button = styled.button`
-  margin-bottom: 12px;
-
   width: 70px;
   height: 70px;
 
@@ -44,6 +39,10 @@ export const Icon = styled(FiPhone)`
 `;
 
 export const List = styled.ul`
+  position: absolute;
+  bottom: -120px;
+  right: 0;
+
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -63,7 +62,7 @@ export const List = styled.ul`
   visibility: ${props => (props.isOpen ? 'visible' : 'hidden')};
   opacity: ${props => (props.isOpen ? '1' : '0')};
   pointer-events: ${props => (props.isOpen ? 'auto' : 'none')};
-  transform: ${props => (props.isOpen ? 'scale(1)' : 'scale(0)')};
+  transform: ${props => (props.isOpen ? 'translatex(0)' : 'translatex(100%)')};
 `;
 
 export const Item = styled.li`
