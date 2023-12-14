@@ -18,13 +18,13 @@ import { MainButton } from 'components/Global/Global.styled';
 import { getAllServices } from '../../../redux/services/servicesOperations';
 import { getAllEmployees } from '../../../redux/employees/employeesOperations';
 
-import { selectGetAllServices } from '../../../redux/services/servicesSelectors';
+// import { selectGetAllServices } from '../../../redux/services/servicesSelectors';
 import { selectEmployees } from '../../../redux/employees/employeesSelectors';
 
 import { addNewOrder } from '../../../redux/orders/ordersOperations';
 
 export const ModaAddOrder = props => {
-  const services = useSelector(selectGetAllServices);
+  // const services = useSelector(selectGetAllServices);
   const employees = useSelector(selectEmployees);
 
   const dispatch = useDispatch();
@@ -111,7 +111,7 @@ export const ModaAddOrder = props => {
             size="small"
           />
         </Label>
-        <Label>
+        {/* <Label>
           <LabelText>Послуги</LabelText>
           <FormSelect
             multiple
@@ -128,7 +128,7 @@ export const ModaAddOrder = props => {
               </SelectOption>
             ))}
           </FormSelect>
-        </Label>
+        </Label> */}
         <Label>
           <LabelText>Працівник</LabelText>
           <FormSelect

@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { FiTrash2 } from 'react-icons/fi';
+import { Autocomplete, TextField } from '@mui/material';
 
 export const ServicesContainer = styled.div`
   padding-bottom: 12px;
@@ -25,39 +26,35 @@ export const AddServices = styled.div`
   position: relative;
   display: inline-block;
   margin-left: auto;
-  opacity: 0.7;
-  transition: opacity var(--transition);
-
-  &:hover {
-    opacity: 1;
-  }
 `;
 
-export const AddServicesButton = styled.div`
-  position: relative;
-  display: inline-block;
-  padding: 10px;
-  background-color: #007bff;
-  color: var(--black-color);
-  border: none;
+export const ServicesSelect = styled(Autocomplete)`
+  width: 220px;
   border-radius: 5px;
-  cursor: pointer;
 
-  font-size: 12px;
+  & .MuiInputLabel-root {
+    color: #ffffff;
+  }
+  & .MuiOutlinedInput-notchedOutline {
+    border-color: #0073e6;
+    border-width: 1px;
+  }
+  & .MuiInputBase-input {
+    color: #ffffff;
+  }
+  & .MuiAutocomplete-popupIndicator {
+    color: #ffffff;
+  }
+  & .MuiInputLabel-shrink {
+    color: #0073e6;
+  }
+
   @media screen and (min-width: 768px) {
-    font-size: 16px;
+    width: 400px;
   }
 `;
 
-export const ServicesSelect = styled.select`
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-`;
+export const ServicesTextField = styled(TextField)``;
 
 // Табличка з послугами
 
