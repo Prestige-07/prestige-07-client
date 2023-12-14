@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllServices } from '../../../../redux/services/servicesOperations';
 import { selectGetAllServices } from '../../../../redux/services/servicesSelectors';
@@ -9,8 +9,8 @@ import {
   Header,
   PartTitle,
   AddServices,
-  AddServicesButton,
   ServicesSelect,
+  ServicesTextField,
   TableWrapper,
   Table,
   TableHead,
@@ -24,8 +24,14 @@ import {
 } from './OrderServices.styled';
 
 export const OrderServices = ({ services, orderNumber }) => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [inputRef, setInputRef] = useState(null);
   const allServices = useSelector(selectGetAllServices);
   const dispatch = useDispatch();
+
+  const filteredServices = allServices.filter(service =>
+    service.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   useEffect(() => {
     dispatch(getAllServices());
@@ -82,19 +88,29 @@ export const OrderServices = ({ services, orderNumber }) => {
       <Header>
         <PartTitle>Послуги:</PartTitle>
         <AddServices>
-          <AddServicesButton title="Додати послугу">
-            Додати послугу
-          </AddServicesButton>
           <ServicesSelect
-            onChange={e => handleAddService(JSON.parse(e.target.value))}
-          >
-            <option value=""></option>
-            {allServices.map(service => (
-              <option value={JSON.stringify(service)} key={service._id}>
-                {`${service.name}. ${service.price}грн`}
-              </option>
-            ))}
-          </ServicesSelect>
+            options={filteredServices}
+            getOptionKey={option => option._id}
+            getOptionLabel={service => `${service.name}. ${service.price}грн`}
+            value={null}
+            onChange={(event, newValue) => {
+              if (newValue) {
+                handleAddService(newValue);
+                inputRef && inputRef.blur();
+              }
+            }}
+            onBlur={() => setSearchTerm('')}
+            renderInput={params => (
+              <ServicesTextField
+                {...params}
+                label="Пошук послуг..."
+                variant="outlined"
+                value={searchTerm}
+                onChange={e => setSearchTerm(e.target.value)}
+                inputRef={ref => setInputRef(ref)}
+              />
+            )}
+          />
         </AddServices>
       </Header>
 
