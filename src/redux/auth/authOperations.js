@@ -3,7 +3,8 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import toast from 'react-hot-toast';
 
 const instance = axios.create({
-  baseURL: 'https://prestige-07.com.ua/',
+//  baseURL: 'https://prestige-07.com.ua/',
+  baseURL: 'https://prestige07-backend-2cmw.onrender.com//',
 });
 
 export const setToken = token => {
