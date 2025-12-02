@@ -1,6 +1,6 @@
 {
   "name": "prestige-07",
-  "homepage": "https://yevhenii-lukianenko.github.io/prestige-07-client/",
+  // "homepage": "https://yevhenii-lukianenko.github.io/prestige-07-client/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
