@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/prestige-07-client/static/css/main.e9a608c8.css",
-    "main.js": "/prestige-07-client/static/js/main.7423a5bf.js",
+    "main.js": "/prestige-07-client/static/js/main.f46479d3.js",
     "static/css/306.8480739a.chunk.css": "/prestige-07-client/static/css/306.8480739a.chunk.css",
     "static/js/306.4484af60.chunk.js": "/prestige-07-client/static/js/306.4484af60.chunk.js",
     "static/js/92.8c795c38.chunk.js": "/prestige-07-client/static/js/92.8c795c38.chunk.js",
@@ -31,7 +31,7 @@
     "index.html": "/prestige-07-client/index.html",
     "static/media/instagram.svg": "/prestige-07-client/static/media/instagram.8ff7ce92ad753b591ed4c1d03e84c026.svg",
     "main.e9a608c8.css.map": "/prestige-07-client/static/css/main.e9a608c8.css.map",
-    "main.7423a5bf.js.map": "/prestige-07-client/static/js/main.7423a5bf.js.map",
+    "main.f46479d3.js.map": "/prestige-07-client/static/js/main.f46479d3.js.map",
     "306.8480739a.chunk.css.map": "/prestige-07-client/static/css/306.8480739a.chunk.css.map",
     "306.4484af60.chunk.js.map": "/prestige-07-client/static/js/306.4484af60.chunk.js.map",
     "92.8c795c38.chunk.js.map": "/prestige-07-client/static/js/92.8c795c38.chunk.js.map",
@@ -54,6 +54,6 @@
   },
   "entrypoints": [
     "static/css/main.e9a608c8.css",
-    "static/js/main.7423a5bf.js"
+    "static/js/main.f46479d3.js"
   ]
 }
